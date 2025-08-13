@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utility Mechanisms - HyperFlow Protocol</title>
+    <title>HyperFlow Protocol - Utility Mechanisms</title>
     <style>
         * {
             margin: 0;
@@ -21,33 +21,13 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .back-link {
-            display: inline-block;
-            background: rgba(0, 212, 255, 0.1);
-            color: #00d4ff;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-        
-        .back-link:hover {
-            background: rgba(0, 212, 255, 0.2);
-            transform: translateY(-2px);
+            padding: 40px 20px 60px 20px;
         }
         
         h1 {
             color: #00d4ff;
             font-size: 2.5rem;
+            text-align: center;
             margin-bottom: 10px;
         }
         
@@ -76,12 +56,7 @@
             color: #cbd5e0;
         }
         
-        ul {
-            margin: 15px 0;
-            padding-left: 25px;
-        }
-        
-        ol {
+        ul, ol {
             margin: 15px 0;
             padding-left: 25px;
         }
@@ -92,114 +67,52 @@
         }
         
         strong {
-            color: #ffffff;
-            font-weight: 600;
+            color: #fff;
         }
         
-        em {
-            color: #a0aec0;
-        }
-        
-        code {
-            background: rgba(0, 212, 255, 0.1);
-            color: #00d4ff;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 0.9em;
-        }
-        
-        .code-block {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            border-radius: 8px;
-            margin: 20px 0;
-            overflow-x: auto;
-        }
-        
-        .code-block pre {
-            padding: 20px;
-            margin: 0;
-        }
-        
-        .code-block code {
-            background: none;
-            color: #e2e8f0;
-            padding: 0;
-        }
-        
-        hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.5), transparent);
-            margin: 30px 0;
-        }
-        
-        .table-container {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(77, 208, 225, 0.3);
+        .utility-card {
+            background: rgba(20, 30, 50, 0.6);
+            border: 1px solid rgba(77, 208, 225, 0.2);
             border-radius: 12px;
-            padding: 25px;
-            margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
         }
         
-        .table-container h4 {
-            color: #00d4ff;
-            text-align: center;
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .metric-item {
+            background: rgba(30, 40, 60, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4dd0e1;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: #4dd0e1;
+            text-decoration: none;
             margin-bottom: 20px;
-            font-size: 1.4rem;
+            padding: 8px 16px;
+            border: 1px solid #4dd0e1;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
         
-        .table-responsive {
-            overflow-x: auto;
-            border-radius: 8px;
-        }
-        
-        .data-table, .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .data-table th, .comparison-table th {
-            background: rgba(0, 212, 255, 0.2);
-            color: #ffffff;
-            padding: 15px 12px;
-            text-align: left;
-            font-weight: 600;
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
-        }
-        
-        .data-table td, .comparison-table td {
-            padding: 12px;
-            border-bottom: 1px solid rgba(77, 208, 225, 0.2);
-            color: #cbd5e0;
-            background: rgba(0, 0, 0, 0.1);
-        }
-        
-        .data-table tr:nth-child(even) td, .comparison-table tr:nth-child(even) td {
-            background: rgba(0, 0, 0, 0.2);
-        }
-        
-        .data-table tr:hover td, .comparison-table tr:hover td {
-            background: rgba(0, 212, 255, 0.1);
-        }
-        
-        .hyperflow-advantage {
-            background: rgba(129, 199, 132, 0.2) !important;
-            color: #81c784 !important;
-            font-weight: 600;
-        }
-        
-        .comparison-table td:first-child {
-            font-weight: 600;
-            color: #ffffff;
+        .back-link:hover {
+            background: #4dd0e1;
+            color: #0a0f1c;
         }
         
         @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px 40px 15px;
+            }
+            
             h1 {
                 font-size: 2rem;
             }
@@ -207,109 +120,239 @@
             h2 {
                 font-size: 1.5rem;
             }
-            
-            .container {
-                padding: 20px 15px;
-            }
-            
-            .table-container {
-                padding: 15px;
-                margin: 20px 0;
-            }
-            
-            .data-table th, .comparison-table th,
-            .data-table td, .comparison-table td {
-                padding: 8px 6px;
-                font-size: 0.9rem;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <a href="https://hyperflowprotocol.github.io" class="back-link">← Back to Main Whitepaper</a>
+        <a href="https://Clockerwork02.github.io" class="back-link">← Back to Main Documentation</a>
+        
+        <h1>HyperFlow Protocol</h1>
+        <h2>Comprehensive Utility Mechanisms</h2>
+        
+        <div class="utility-card">
+            <h2>$FLOW Token Utility Overview</h2>
+            <p>The $FLOW token serves as the cornerstone of the HyperFlow ecosystem with multiple interconnected utility mechanisms that create sustainable demand and value accrual.</p>
         </div>
-        <h1>FLOW Token Utility Mechanisms</h1>
-
-<h2>Governance Rights</h2>
-<ul>
-    <li><strong>Voting Power</strong>: 1 FLOW = 1 vote on all protocol decisions</li>
-    <li><strong>Proposal Submission</strong>: Minimum 10,000 FLOW to submit governance proposals</li>
-    <li><strong>Parameter Control</strong>: Community control over fees, allocations, and strategies</li>
-    <li><strong>Upgrade Decisions</strong>: Protocol upgrades require community approval</li>
-</ul>
-
-<h2>Revenue Sharing</h2>
-<div class="table-container">
-    <h4>Protocol Revenue Streams</h4>
-    <div class="table-responsive">
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>Revenue Source</th>
-                    <th>Rate</th>
-                    <th>Distribution to Stakers</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Vault Performance Fees</strong></td>
-                    <td>10% of yields</td>
-                    <td>70%</td>
-                </tr>
-                <tr>
-                    <td><strong>Cross-Chain Bridge</strong></td>
-                    <td>0.1% per transfer</td>
-                    <td>70%</td>
-                </tr>
-                <tr>
-                    <td><strong>DEX Aggregation</strong></td>
-                    <td>0.05% per trade</td>
-                    <td>70%</td>
-                </tr>
-                <tr>
-                    <td><strong>Premium Services</strong></td>
-                    <td>Monthly subscriptions</td>
-                    <td>70%</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<h2>Enhanced Yields</h2>
-<div class="table-container">
-    <h4>FLOW Holder Boosts</h4>
-    <div class="table-responsive">
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>FLOW Holdings</th>
-                    <th>Yield Boost</th>
-                    <th>Additional Benefits</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>1,000 - 10,000</strong></td>
-                    <td>1.1x multiplier</td>
-                    <td>5% fee discount</td>
-                </tr>
-                <tr>
-                    <td><strong>10,000 - 100,000</strong></td>
-                    <td>1.25x multiplier</td>
-                    <td>10% fee discount</td>
-                </tr>
-                <tr>
-                    <td><strong>100,000+</strong></td>
-                    <td>1.5x multiplier</td>
-                    <td>15% fee discount + priority support</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        
+        <h2>Primary Utilities</h2>
+        
+        <div class="utility-card">
+            <h3>1. Governance & Protocol Control</h3>
+            
+            <h4>Democratic Governance System</h4>
+            <ul>
+                <li><strong>Voting Power</strong>: 1 FLOW = 1 vote (no tier discrimination)</li>
+                <li><strong>Proposal Creation</strong>: Any holder can submit governance proposals</li>
+                <li><strong>Parameter Control</strong>: Vote on fees, yield strategies, risk parameters</li>
+                <li><strong>Treasury Management</strong>: Direct control over protocol funds and investments</li>
+                <li><strong>Emergency Decisions</strong>: Community vote on critical protocol changes</li>
+            </ul>
+            
+            <h4>Governance Scope</h4>
+            <ul>
+                <li><strong>Fee Structures</strong>: Adjust performance fees, trading fees, bridge fees</li>
+                <li><strong>Vault Strategies</strong>: Approve new yield farming strategies and protocols</li>
+                <li><strong>Risk Parameters</strong>: Set liquidation thresholds, maximum leverage ratios</li>
+                <li><strong>Protocol Integrations</strong>: Vote on new DEX and lending protocol partnerships</li>
+                <li><strong>Token Utility</strong>: Expand or modify token use cases based on ecosystem needs</li>
+            </ul>
+        </div>
+        
+        <div class="utility-card">
+            <h3>2. Revenue Sharing & Staking Rewards</h3>
+            
+            <h4>Revenue Distribution Mechanism</h4>
+            <ul>
+                <li><strong>Staking Pool</strong>: 50% of all protocol revenue distributed to FLOW stakers</li>
+                <li><strong>Real-Time Accrual</strong>: Rewards accumulate continuously based on protocol activity</li>
+                <li><strong>Auto-Compounding</strong>: Optional automatic reinvestment of staking rewards</li>
+                <li><strong>Multiple Assets</strong>: Rewards paid in HYPE, USDC, and other ecosystem tokens</li>
+            </ul>
+            
+            <h4>Revenue Sources</h4>
+            <ul>
+                <li><strong>Vault Performance Fees</strong>: 10% of all yield generated by smart vaults</li>
+                <li><strong>Trading Fees</strong>: 0.03% on all aggregated trades through the platform</li>
+                <li><strong>Bridge Fees</strong>: 0.05% on cross-chain asset transfers</li>
+                <li><strong>Premium Subscriptions</strong>: Revenue from advanced analytics and features</li>
+                <li><strong>Institutional Services</strong>: Custom vault management and strategy fees</li>
+            </ul>
+            
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <h4>Conservative APY</h4>
+                    <p><strong>8-12%</strong> during normal market conditions</p>
+                </div>
+                <div class="metric-item">
+                    <h4>Growth Phase APY</h4>
+                    <p><strong>12-15%</strong> during high adoption periods</p>
+                </div>
+                <div class="metric-item">
+                    <h4>Bull Market APY</h4>
+                    <p><strong>15-20%</strong> during peak ecosystem growth</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="utility-card">
+            <h3>3. Yield Enhancement & Platform Benefits</h3>
+            
+            <h4>Vault Access & Optimization</h4>
+            <ul>
+                <li><strong>Priority Strategies</strong>: FLOW holders get early access to new high-yield vaults</li>
+                <li><strong>Enhanced Returns</strong>: Token holders receive boosted yields on all vault strategies</li>
+                <li><strong>Risk Mitigation</strong>: Access to advanced hedging and protection mechanisms</li>
+                <li><strong>Custom Strategies</strong>: Personalized vault creation based on risk preferences</li>
+            </ul>
+            
+            <h4>Platform Feature Access</h4>
+            <ul>
+                <li><strong>Advanced Analytics</strong>: Real-time portfolio optimization and risk assessment</li>
+                <li><strong>Strategy Backtesting</strong>: Historical performance analysis for informed decisions</li>
+                <li><strong>Market Intelligence</strong>: Cross-protocol yield comparisons and opportunities</li>
+                <li><strong>Priority Execution</strong>: Faster trade routing and reduced slippage</li>
+            </ul>
+        </div>
+        
+        <div class="utility-card">
+            <h3>4. Cross-Protocol Integration Benefits</h3>
+            
+            <h4>Ecosystem Synergies</h4>
+            <ul>
+                <li><strong>Multi-Protocol Rewards</strong>: Enhanced yields when using FLOW across HyperEVM platforms</li>
+                <li><strong>Airdrop Multipliers</strong>: Increased allocation from ecosystem partner airdrops</li>
+                <li><strong>Liquidity Mining</strong>: Additional rewards for providing FLOW liquidity on DEXs</li>
+                <li><strong>Partnership Benefits</strong>: Exclusive access to new protocol launches and features</li>
+            </ul>
+            
+            <h4>HyperEVM Native Advantages</h4>
+            <ul>
+                <li><strong>Gas Fee Discounts</strong>: Reduced transaction costs for FLOW holders</li>
+                <li><strong>Bridge Subsidies</strong>: Lower fees for cross-chain asset movements</li>
+                <li><strong>MEV Protection</strong>: Advanced transaction ordering for FLOW-based trades</li>
+                <li><strong>Orderbook Integration</strong>: Exclusive access to HyperCore orderbook strategies</li>
+            </ul>
+        </div>
+        
+        <h2>Secondary Utilities</h2>
+        
+        <div class="utility-card">
+            <h3>5. Insurance & Risk Management</h3>
+            
+            <h4>Protocol Insurance Pool</h4>
+            <ul>
+                <li><strong>Coverage Fund</strong>: FLOW tokens staked as collateral for vault insurance</li>
+                <li><strong>Risk Assessment</strong>: Token holders participate in strategy risk evaluation</li>
+                <li><strong>Claims Processing</strong>: Community governance for insurance claim approvals</li>
+                <li><strong>Premium Distribution</strong>: Insurance premiums distributed to coverage providers</li>
+            </ul>
+            
+            <h4>Smart Risk Controls</h4>
+            <ul>
+                <li><strong>Emergency Pause</strong>: FLOW holders can trigger emergency stops for vaults</li>
+                <li><strong>Risk Limits</strong>: Community-set maximum exposure limits per strategy</li>
+                <li><strong>Liquidation Protection</strong>: Automated position management based on FLOW voting</li>
+                <li><strong>Recovery Mechanisms</strong>: Community-driven funds recovery processes</li>
+            </ul>
+        </div>
+        
+        <div class="utility-card">
+            <h3>6. Ecosystem Development</h3>
+            
+            <h4>Innovation Funding</h4>
+            <ul>
+                <li><strong>Grant Programs</strong>: FLOW tokens allocated for ecosystem development</li>
+                <li><strong>Developer Incentives</strong>: Rewards for building on HyperFlow infrastructure</li>
+                <li><strong>Research Funding</strong>: Academic partnerships funded through FLOW treasury</li>
+                <li><strong>Community Projects</strong>: Grassroots initiatives supported by token holders</li>
+            </ul>
+        </div>
+        
+        <div class="utility-card">
+            <h3>7. Advanced Features Access</h3>
+            
+            <h4>Premium Platform Tiers</h4>
+            <ul>
+                <li><strong>Basic Tier</strong>: Free access with 1,000+ FLOW tokens</li>
+                <li><strong>Pro Tier</strong>: Enhanced features with 10,000+ FLOW tokens</li>
+                <li><strong>Elite Tier</strong>: Full access with 100,000+ FLOW tokens</li>
+                <li><strong>Institutional</strong>: Custom solutions with 1,000,000+ FLOW tokens</li>
+            </ul>
+        </div>
+        
+        <div class="utility-card">
+            <h3>8. Liquidity Incentives</h3>
+            
+            <h4>Market Making Rewards</h4>
+            <ul>
+                <li><strong>LP Rewards</strong>: Additional FLOW tokens for providing liquidity</li>
+                <li><strong>Trading Rebates</strong>: Fee reductions for high-volume FLOW holders</li>
+                <li><strong>Arbitrage Opportunities</strong>: Priority access to cross-DEX arbitrage</li>
+                <li><strong>Market Stability</strong>: Incentives for maintaining tight spreads</li>
+            </ul>
+        </div>
+        
+        <div class="utility-card">
+            <h3>9. Partnership Ecosystem</h3>
+            
+            <h4>Strategic Integrations</h4>
+            <ul>
+                <li><strong>Cross-Protocol Benefits</strong>: Enhanced rewards when using partner protocols</li>
+                <li><strong>Shared Governance</strong>: Voting rights in partner ecosystem decisions</li>
+                <li><strong>Exclusive Launches</strong>: Early access to new protocol features and tokens</li>
+                <li><strong>Fee Sharing</strong>: Revenue from partner protocol integrations</li>
+            </ul>
+        </div>
+        
+        <div class="utility-card">
+            <h3>10. Future Utility Expansion</h3>
+            
+            <h4>Planned Developments</h4>
+            <ul>
+                <li><strong>NFT Integration</strong>: Utility NFTs with enhanced yield capabilities</li>
+                <li><strong>Real-World Assets</strong>: Tokenized asset exposure through FLOW holdings</li>
+                <li><strong>Cross-Chain Governance</strong>: Multi-chain voting and parameter control</li>
+                <li><strong>AI Strategy Creation</strong>: Machine learning-powered personalized strategies</li>
+            </ul>
+        </div>
+        
+        <h2>Utility Value Proposition</h2>
+        
+        <div class="utility-card">
+            <h3>Sustainable Token Economics</h3>
+            <p>The comprehensive utility framework ensures constant demand for FLOW tokens across multiple use cases, creating a deflationary pressure through:</p>
+            
+            <ul>
+                <li><strong>Staking Lock-up</strong>: Long-term token removal from circulation</li>
+                <li><strong>Fee Burn Mechanisms</strong>: Quarterly token buyback and burn programs</li>
+                <li><strong>Governance Participation</strong>: Active engagement requires token holding</li>
+                <li><strong>Platform Growth</strong>: Increasing utility as ecosystem expands</li>
+            </ul>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-item">
+                <h4>Revenue Sharing</h4>
+                <p><strong>70%</strong> of protocol revenue to token holders</p>
+            </div>
+            <div class="metric-item">
+                <h4>Staking Rewards</h4>
+                <p><strong>8-20%</strong> APY based on market conditions</p>
+            </div>
+            <div class="metric-item">
+                <h4>Governance Power</h4>
+                <p><strong>1:1</strong> democratic voting (1 FLOW = 1 vote)</p>
+            </div>
+            <div class="metric-item">
+                <h4>Utility Count</h4>
+                <p><strong>10+</strong> distinct use cases and growing</p>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: 40px; color: #4dd0e1;">
+            <strong>HyperFlow Protocol - Building the Future of DeFi Infrastructure</strong>
+        </p>
     </div>
 </body>
 </html>
