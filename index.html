@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utility Mechanisms - HyperFlow Protocol</title>
+    <!-- Cache bust: 2025-08-13T10:16:09.543Z -->
     <style>
         * {
             margin: 0;
@@ -229,83 +230,15 @@
             font-weight: 500;
         }
         
-        .feature-card {
-            background: rgba(15, 25, 45, 0.6);
-            border: 1px solid rgba(34, 211, 238, 0.2);
-            border-radius: 10px;
-            padding: 25px;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            border-color: rgba(0, 212, 255, 0.4);
-            transform: translateX(5px);
-        }
-        
-        .feature-card h4 {
-            color: #22d3ee;
-            margin-bottom: 15px;
-        }
-        
-        hr {
-            margin: 50px 0;
-            border: none;
-            height: 2px;
-            background: linear-gradient(90deg, transparent 0%, #00d4ff 50%, transparent 100%);
-        }
-        
-        .footer-link {
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .footer-link a {
-            color: #00d4ff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-link a:hover {
-            color: #22d3ee;
-            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-        }
-        
         @media (max-width: 768px) {
-            .container {
-                padding: 25px 15px;
-            }
-            
-            .content {
-                padding: 30px 25px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.6rem;
-            }
-            
-            table {
-                font-size: 0.85rem;
-            }
-            
-            th, td {
-                padding: 10px 12px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-                gap: 15px;
-            }
-            
-            .stat-value {
-                font-size: 1.8rem;
-            }
+            .container { padding: 25px 15px; }
+            .content { padding: 30px 25px; }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.6rem; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 10px 12px; }
+            .stats-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+            .stat-value { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -323,33 +256,32 @@
 
 <h3>Core Utility Mechanisms</h3>
 
-<div class="feature-card">
-    <h4>1. Governance & Voting Rights</h4>
-    <p>FLOW token holders participate in protocol governance through on-chain voting mechanisms, proposal creation, and strategic decision-making processes that shape the future development of the ecosystem.</p>
+<div class="stats-grid">
+    <div class="stat-item">
+        <span class="stat-value">70%</span>
+        <span class="stat-label">Revenue Share</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">10+</span>
+        <span class="stat-label">Utility Cases</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">5</span>
+        <span class="stat-label">Tier Levels</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">Governance</span>
+        <span class="stat-label">Rights</span>
+    </div>
 </div>
 
-<div class="feature-card">
-    <h4>2. Revenue Sharing (70% Distribution)</h4>
-    <p>Token holders receive 70% of all protocol-generated revenue through staking mechanisms, creating direct value accrual from platform success and sustainable reward distribution.</p>
-</div>
-
-<div class="feature-card">
-    <h4>3. Yield Enhancement Multipliers</h4>
-    <p>Staked FLOW tokens provide yield multipliers across all protocol strategies, with higher stakes unlocking premium yield opportunities and exclusive strategy access.</p>
-</div>
-
-<div class="feature-card">
-    <h4>4. Fee Discounts & Priority Access</h4>
-    <p>FLOW holders enjoy reduced transaction fees across all protocol interactions and priority access to new features, strategies, and partnership opportunities.</p>
-</div>
-
-<h3>Tier-Based Benefits System</h3>
+<h3>Tier-Based Benefits</h3>
 
 <div class="table-container">
     <table>
         <thead>
             <tr>
-                <th>Tier Level</th>
+                <th>Tier</th>
                 <th>FLOW Requirement</th>
                 <th>Benefits</th>
                 <th>APY Boost</th>
@@ -359,117 +291,39 @@
             <tr>
                 <td><strong>Bronze</strong></td>
                 <td>1,000+ FLOW</td>
-                <td>Basic staking, governance rights</td>
+                <td>Basic staking, governance</td>
                 <td>+5%</td>
             </tr>
             <tr>
                 <td><strong>Silver</strong></td>
                 <td>10,000+ FLOW</td>
-                <td>Premium strategies, fee discounts</td>
+                <td>Premium strategies, discounts</td>
                 <td>+12%</td>
             </tr>
             <tr>
                 <td><strong>Gold</strong></td>
                 <td>25,000+ FLOW</td>
-                <td>Enhanced multipliers, priority support</td>
+                <td>Enhanced multipliers</td>
                 <td>+20%</td>
             </tr>
             <tr>
                 <td><strong>Platinum</strong></td>
                 <td>50,000+ FLOW</td>
-                <td>Proposal creation, exclusive strategies</td>
+                <td>Proposal creation</td>
                 <td>+30%</td>
             </tr>
             <tr>
                 <td><strong>Diamond</strong></td>
                 <td>100,000+ FLOW</td>
-                <td>Institutional access, custom solutions</td>
+                <td>Institutional access</td>
                 <td>+50%</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<h3>Revenue Sources Driving Utility</h3>
-
-<div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th>Revenue Source</th>
-                <th>Fee Structure</th>
-                <th>Distribution to FLOW Holders</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Cross-Chain Bridge Fees</strong></td>
-                <td>0.1% of transfer volume</td>
-                <td>70%</td>
-            </tr>
-            <tr>
-                <td><strong>Vault Performance Fees</strong></td>
-                <td>10% of generated yield</td>
-                <td>70%</td>
-            </tr>
-            <tr>
-                <td><strong>Governance Proposal Fees</strong></td>
-                <td>Anti-spam submission fee</td>
-                <td>70%</td>
-            </tr>
-            <tr>
-                <td><strong>Premium Features</strong></td>
-                <td>Monthly/Annual subscriptions</td>
-                <td>70%</td>
-            </tr>
-            <tr>
-                <td><strong>MEV Capture & Redistribution</strong></td>
-                <td>Variable capture rate</td>
-                <td>70%</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<h3>Token Economics & Scarcity</h3>
-
-<div class="highlight-section">
-    <h4>Supply Management Mechanisms</h4>
-    <ul>
-        <li><strong>Fixed Supply:</strong> 1,000,000,000 FLOW tokens with no inflation or additional creation</li>
-        <li><strong>Quarterly Burns:</strong> Community-voted token burns from protocol revenue</li>
-        <li><strong>Staking Lock-ups:</strong> Long-term staking reduces circulating supply</li>
-        <li><strong>Utility Demand:</strong> Increasing protocol usage drives continuous token demand</li>
-    </ul>
-</div>
-
-<h3>Ecosystem Integration Benefits</h3>
-
-<div class="stats-grid">
-    <div class="stat-item">
-        <span class="stat-value">10+</span>
-        <span class="stat-label">Utility Cases</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">70%</span>
-        <span class="stat-label">Revenue Share</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">5</span>
-        <span class="stat-label">Tier Levels</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">Unlimited</span>
-        <span class="stat-label">Growth Potential</span>
-    </div>
-</div>
-
-<p>Beyond direct protocol utility, FLOW tokens provide access to the broader HyperFlow ecosystem including partner protocol benefits, exclusive investment opportunities, educational resources, and community recognition programs.</p>
-
-<hr>
-
-<div class="footer-link">
-    <p><strong>For complete protocol details: <a href="https://clockerwork02.github.io">HyperFlow Protocol Whitepaper</a></strong></p>
+<div style="text-align: center; margin-top: 40px;">
+    <p><strong>For complete protocol details: <a href="https://clockerwork02.github.io" style="color: #00d4ff;">HyperFlow Protocol Whitepaper</a></strong></p>
 </div>
 
         </div>
